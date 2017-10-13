@@ -2,6 +2,9 @@ git status		Check the status of the master versus local
 git diff		Check the difference between local and master
 git add <filename>	Adds any files into the next commit
 git clone		Clone from master to local
+git commit		Commits changes to local repo
+git commit -m ""	Commit with a message
+git push		Commit changes to online git
 ls			Shows all files in currently open folder
 cd <foldername>		Open a folder
 clear			Empty up the bash
