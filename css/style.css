@@ -51,6 +51,26 @@ textarea
     font-size: 15px;
     resize: none;
 }
+button
+{
+	background-color:#B32C0E;
+	color:#FFFFFF;
+	margin:4px;
+	padding:10px 24px;
+	text-align:center;
+	display:inline-block;
+	border-radius: 4px;
+	font-size:15px;
+}
+
+#map
+{
+	height:480px;
+	weight:480px;
+	margin:0;
+	padding:0;
+}
+
 #wrap
 {
 	width:100px;

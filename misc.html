@@ -45,6 +45,44 @@
 				<td> Third </td>
 			</tr>
 		</table>
+		
+		<h2> Geolocation </h2>
+		<div id ="map">	</div>
+		<script>
+			function initMap()
+			{
+				var location = {lat: 64.215288, lng:27.710996 };
+				var map = new google.maps.Map(document.getElementById("map"),
+					{ zoom:13, center: location });
+				var marker = new google.maps.Marker({ position:location, map:map});
+			}
+		</script>
+		
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvXiGA7ZVvWnMT4XD3zmqDeWbH1dTKgFA&callback=initMap"></script>
+		
+		<script>
+			function showLocation()
+			{
+				if(navigator.geoLocation)
+				{
+					navigator.geoLocation.getCurrentPosition(showPosition);
+				}
+				else
+				{ 
+					alert("Browser doesnt support geolocation");
+				}
+			}
+		</script>
+		
+		<script>
+			function showPosition(position)
+			{
+				alert("Latitude: " + position.coords.latitude + " Longitude: " + position.coords.Longitude);
+			}
+		</script>
+		<button onclick="showLocation()">Where am i?</button>
+
+
 		</div>
 		</div>
 	</div>
